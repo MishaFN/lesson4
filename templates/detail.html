@@ -1,0 +1,8 @@
+{%        extends 'base.html'                  %}
+{%           block content                     %}
+    <a href="{%  url 'home'  %}"> <input type="button" value="Go To Home">  </a>
+    <h1>{{novost.title}}</h1>
+    <img src="{{novost.image.url}}" alt="">
+    <p>{{novost.pub_date}} <strong> CATEGORY :{{novost.category}}</strong></p>
+    <p>{{novost.text}}</p>
+{%   endblock                                  %}

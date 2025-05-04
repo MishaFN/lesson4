@@ -1,0 +1,12 @@
+{%        extends 'base.html'                  %}
+{%           block content                     %}
+
+{% for new in news %} 
+<h1>{{new.title}}</h1>
+<p>{{new.pub_date}}</p>
+<a href="{% url 'dev' new.id %}">
+    <img src="{{ new.image.url }}" alt="kartinka">
+</a>
+
+{% endfor %}
+{%   endblock                                  %}
